@@ -133,20 +133,18 @@ Relatedly, although the muscle-specific microRNA *MIR1-1* was itself induced, no
 
 ## Files
 
-```
-data/
-  GSE126296.top.table.tsv      full GEO2R output (33,297 probes)
-  up_strict_68.txt             adj.p < 0.05 and logFC > 1
-  up_all_248.txt               adj.p < 0.05, any magnitude
-  down_all_75.txt              adj.p < 0.05, any magnitude
-  sprint_genes_up_and_down.txt both lists, g:Profiler multiquery format
-figures/
-  volcano.png                  GEO2R volcano plot
-  gprofiler_multiquery.png     enrichment, induced vs repressed
-  gprofiler_tf.png             transcription factor enrichment
-results/
-  gprofiler_detailed.csv       full enrichment output
-```
+| File | Contents |
+|---|---|
+| `GSE126296_GEO2R_top_table.tsv` | Full GEO2R output for all 33,297 probes: probe ID, gene symbol, gene title, log2 fold change, unadjusted p, Benjamini–Hochberg adjusted p, moderated t and B statistics. Groups ordered post vs pre, so positive logFC indicates induction. |
+| `genes_induced_strong_68.txt` | 68 named genes: adj. p < 0.05 and \|logFC\| > 1. |
+| `genes_induced_all_248.txt` | 248 named genes: adj. p < 0.05, any magnitude. |
+| `genes_repressed_75.txt` | 75 named genes: adj. p < 0.05, any magnitude. |
+| `gprofiler_multiquery_input.txt` | Both lists formatted for g:Profiler multiquery mode. |
+| `figure1_volcano.png` | Volcano plot of differential expression, post vs pre. |
+| `figure2_enrichment_multiquery_full.png` | Enrichment across annotation sources, induced and repressed, with the numbered driver-term table. |
+| `Sprint_transcriptomics_report.docx` | Full scientific report with figures, references and appendices. |
+
+Probes without a gene symbol were excluded from the derived lists, since enrichment tools cannot map them. Raw CEL files are not redistributed here; they are available from GEO under accession GSE126296.
 
 ## Reproducing this
 
